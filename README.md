@@ -1,0 +1,1 @@
+Inspired by https://blog.jayway.com/2014/06/13/sandboxing-plugins-in-java/
