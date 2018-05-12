@@ -1,4 +1,7 @@
-#Sandboxing JARs
+# Execute external JARSs in a sandbox environment 
+
+[![build status](https://travis-ci.org/SaschaRodekamp/sandbox.svg?branch=master)](https://travis-ci.org/SaschaRodekamp/sandbox)
+
 
 The code executes an external JAR in its own Sandbox in which the access to the outside world can be restricted. 
 This can be helpful if someone else implements functionality that is deployt in a single JAR and executed on your system.
