@@ -1,1 +1,1 @@
-rootProject.name = "sandbox"
+include("sandbox", "demo")

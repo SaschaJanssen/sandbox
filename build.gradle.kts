@@ -1,22 +1,22 @@
 plugins {
-    kotlin("jvm") version "1.2.41"
+    base
+    kotlin("jvm") version "1.2.41" apply false
 }
 
+allprojects {
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
+    group = "com.rdk.sandbox"
+    version = "1.0"
+
+    repositories {
+        jcenter()
+    }
+
 }
 
 dependencies {
-    compile(kotlin("stdlib"))
-
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.2.0")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.2.0")
-    testCompile("org.assertj:assertj-core:3.9.1")
-
-}
-
-repositories {
-    jcenter()
+    // Make the root project archives configuration depend on every subproject
+    subprojects.forEach {
+        archives(it)
+    }
 }
